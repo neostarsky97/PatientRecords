@@ -28,5 +28,16 @@
         this._reports.push(report);
     }
 
+    Patient.prototype.equals = function (patient) {
+        if (patient instanceof Patient) {
+            return (this._mrn == patient._mrn) && 
+                   (this._name == patient._name) && 
+                   (this._age == patient._age) && 
+                   (this._gender == patient._gender);
+        }  
+        
+        return false;
+    }
+
     _super.Patient = Patient;
 })(window.Philips.Objects);
