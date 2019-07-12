@@ -11,7 +11,9 @@
             </div>
 
             <div class='patient_container'>
-                <div class='patient_table'>
+
+                <div class='top_container'>
+                    <div class='patient_table'>
                         <table id='ptable'>
                             <thead id='ptable_head'>
                                 <tr>
@@ -26,17 +28,52 @@
                         </table>
                     </div>
         
-                    <div id='patient_display'>
+                    <div id='patient_display' class='patient_dislay'>
                         <div class='patient_detail_heading'>
                             <h4>Patient info: </h4>
                         </div>
                         <div id='patient_info'>
         
                         </div>
-                        <div id='patient_record_display'>
+                        <div id='patient_show_record_button'>
                             <button id='showRecordButton'>Show records</button>
                         </div>                
                     </div>
+                </div>
+
+
+                <div class='patient_record_display'>
+                    <div class='record_container'> 
+                        <div class='ptable'>
+                            <table id='rtable'>
+                                <thead>
+                                    <th>DRN</th>
+                                    <th>Date</th>
+                                    <th>Doctor</th>
+                                    <th>Message</th>
+                                </thead>
+            
+                                <!-- Dummy populated-->
+                                <tbody>
+                                    <!-- <tr>
+                                        <td>01/01/1999</td>
+                                        <td>04/01/1999</td>
+                                        <td>Watson</td>
+                                        <td>Catatonic</td>
+                                    </tr>
+            
+                                    <tr>
+                                        <td>01/01/1999</td>
+                                        <td>04/01/1999</td>
+                                        <td>Watson</td>
+                                        <td>Catatonic</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>      
+                    </div>
+                </div>
+
             </div>            
         </div>
         

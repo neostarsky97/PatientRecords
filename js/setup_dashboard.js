@@ -14,9 +14,7 @@
             var data = '';
             data += 'Name: ' + actualPatientObject.getName() + '<br>';
             data += 'Age: ' + actualPatientObject.getAge() + '<br>';
-            data += 'Gender: ' + actualPatientObject.getGender() + '<br>';
-            console.log(data);
-            console.log(display);
+            data += 'Gender: ' + actualPatientObject.getGender() + '<br>';            
             display.innerHTML = data;
         });
     }
