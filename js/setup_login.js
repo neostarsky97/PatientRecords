@@ -1,27 +1,37 @@
-(function(){
-    document.getElementById('submit').addEventListener('click', function() {
-        var username = document.getElementById('uname');
-        var password = document.getElementById('psw');
+(function(globalRef){
+    globalRef.document.getElementById('submit').addEventListener('click', function() {
+        var username = globalRef.document.getElementById('uname').value;
+        var password = globalRef.document.getElementById('psw').value;
 
+        var statusLabel =  globalRef.document.getElementById('statusLabel');
         // validate ?
+        
+        if (username == '' || password == '') {
+            statusLabel.style.visibility = "visible";
+            statusLabel.innerHTML = "Enter all fields.";            
+            return;
+        } 
 
-        var currentUser = new User(username, password);
-
+        var currentUser = new globalRef.Philips.Objects.User(username, password);                
         // get all users 
-        var users = window.localStorage.getItem('users');
+        var users = JSON.parse(globalRef.localStorage.getItem('users'));
+        // console.log(users);
+
+        var validUser = false; 
 
         for (var index = 0; index < users.length; index++) {
-            if (users[index].equals(currentUser)) {
-                document.getElementById('statusLabel').style.visibility = "hidden";
-                var validUser = true;
+            var userObject = new globalRef.Philips.Objects.User(users[index]._username, users[index]._password);            
+            if (userObject.equals(currentUser)) {                
+               statusLabel.style.visibility = "hidden";
+                validUser = true;
                 break;
-            } else {
-                document.getElementById('statusLabel').style.visibility = "visible";
+            } else {                
+                statusLabel.style.visibility = "visible";
             }
         }
         
         if (validUser) {
-            window.location = 'patientPageView.html';
+            globalRef.location = 'patientPageView.html';
         }
     });
-})();
+})(window);
