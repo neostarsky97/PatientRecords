@@ -11,7 +11,8 @@
         var users = window.localStorage.getItem('users');
 
         for (var index = 0; index < users.length; index++) {
-            if (users[index].equals(currentUser)) {
+            var actualUserObject = new User(users[index].username, users[index].password);
+            if (actualUserObject.equals(currentUser)) {
                 document.getElementById('statusLabel').style.visibility = "hidden";
                 var validUser = true;
                 break;
