@@ -10,33 +10,34 @@
                 <h1>Patient record list</h1>
             </div>
 
-            <div class='patient_table'>
-                <table id='ptable'>
-                    <thead id='ptable_head'>
-                        <tr>
-                            <th>MRN</th>                            
-                        </tr>                        
-                    </thead>
-
-                    <!-- Dummy populated -->
-                    <tbody id='ptable_tbody'>
-                        <tr>                            
-                            <td>Patient1</td>                                                        
-                        </tr>
-                        <tr>                            
-                            <td>Patient1</td>                                                        
-                        </tr>
-                        <tr>                            
-                            <td>Patient1</td>                                                        
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class='patient_display'>
-                Filling this just for reference
-                <!-- do something here -->
-            </div>
+            <div class='patient_container'>
+                <div class='patient_table'>
+                        <table id='ptable'>
+                            <thead id='ptable_head'>
+                                <tr>
+                                    <th>MRN</th>                            
+                                </tr>                        
+                            </thead>
+        
+                            <!-- Dummy populated -->
+                            <tbody id='ptable_tbody'>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+        
+                    <div id='patient_display'>
+                        <div class='patient_detail_heading'>
+                            <h4>Patient info: </h4>
+                        </div>
+                        <div id='patient_info'>
+        
+                        </div>
+                        <div id='patient_record_display'>
+                            <button id='showRecordButton'>Show records</button>
+                        </div>                
+                    </div>
+            </div>            
         </div>
         
         <script src='js/main.js'></script>
