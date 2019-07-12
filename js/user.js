@@ -13,6 +13,8 @@
     }
 
     User.prototype.equals = function (user) {
+        console.log("user object:" + user._username);
+        console.log("this object:" + this._username);
         if (user instanceof User) {
             return (this._username == user._username) && (this._password == user._password); 
         }
