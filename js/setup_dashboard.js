@@ -1,5 +1,5 @@
 (function(globalRef){
-    var table = globalRef.document.getElementById('ptable');
+    var table = globalRef.document.getElementById('ptable_tbody');
 
     var patients = JSON.parse(globalRef.localStorage.getItem('patients'));
 
@@ -10,11 +10,13 @@
         var cell = row.insertCell(0);
         cell.innerHTML = actualPatientObject.getMrn();
         row.addEventListener('click', function(){
-            var display = globalRef.document.getElementById('patient_display');
-            var data = '<h4>Patient Details</h4>'
+            var display = globalRef.document.getElementById('patient_info');
+            var data = '';
             data += 'Name: ' + actualPatientObject.getName() + '<br>';
             data += 'Age: ' + actualPatientObject.getAge() + '<br>';
             data += 'Gender: ' + actualPatientObject.getGender() + '<br>';
+            console.log(data);
+            console.log(display);
             display.innerHTML = data;
         });
     }

@@ -22,11 +22,10 @@ html {
     background-color: #60a9a6;    
 }
 
-.patient_display {
-    float: right;
+#patient_display {
+    float: right;    
     width: 70%;
-    background-color: #caf2d7;
-    height: 100%;
+    background-color: #caf2d7;    
 }
 
 table, th, td {
