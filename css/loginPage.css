@@ -11,3 +11,9 @@ body {
 .container input, button{
     margin: 10px;
 }
+
+.container #statusLabel {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
