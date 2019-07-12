@@ -18,4 +18,7 @@
             display.innerHTML = data;
         });
     }
+
+    globalRef.document.getElementById('showRecord').addEventListener('click', function() {
+    });
 })(window);
