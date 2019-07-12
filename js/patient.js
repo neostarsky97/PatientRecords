@@ -16,6 +16,10 @@
         return this._age;
     }
 
+    Patient.prototype.getName = function () {
+        return this._name;
+    }
+
     Patient.prototype.getGender = function () {
         return this._gender;
     }
